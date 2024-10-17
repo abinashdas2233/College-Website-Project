@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Notifications</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: white;
+            width: 300px;
+            text-align: center;
+            margin: 150px auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        input[type="number"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    {% include 'AdminNavbar.html' %}
+    <div class="container">
+        <h1>Generate Notifications</h1>
+        <form action="/send/" method="post">
+            {% csrf_token %}
+            <label for="no">Notice No:</label>
+            <input type="number" id="no" name="no" placeholder="Enter notice number" required>
+            <label for="notice">Notice:</label>
+            <textarea id="notice" name="notice" placeholder="Give notification" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

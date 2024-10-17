@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks check</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <style>
+      body{
+        overflow: hidden;
+      }
+      
+        .gk {
+            margin-top: 10%;
+            margin-left: 3%;
+            
+            width: 80%;
+            height: 50%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            overflow: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+            text-align: left;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1a1a;
+        }
+        a {
+            text-decoration: none;
+        }
+        .gk h1{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    {% include 'AdminNavbar.html' %}
+    <div class="gk">
+        <h1>Feedbacks</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th> 
+                    <th>Contact NO</th>
+                    <th>Email_Id</th>
+                    <th>Role</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in uk %}
+                <tr>
+                  <td>{{i.name}}</td> 
+                  <td>{{i.address}}</td>
+                  <td>{{i.contactno}}</td>
+                  <td>{{i.email_id}}</td>
+                  <td>{{i.role}}</td>
+                  <td>{{i.message}}</td>
+                  <td><a href="{%url 'del' i.contactno%}"><button>Delete</button></a></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+        </table>
+     </div>
+</body>
+</html>

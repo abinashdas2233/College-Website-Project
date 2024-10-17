@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Video</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+</head>
+<style>
+  #conts {
+  
+  margin-top: 6%;
+    height: 100%;
+    width: 100%;
+ 
+    box-sizing: border-box;
+}
+
+
+
+#vdo {
+    text-align: center;
+   
+}
+
+video {
+    width: 60%;
+    height: 10%;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+   
+    margin:  auto;
+  display: block;
+    font-size: 1.2em;
+    background-color: #ff1919;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+</style>
+
+<body>
+    {%include 'studentnavbar.html'%}
+    <div id="conts">
+        {% for i in u %}
+           
+            <div id="vdo">
+                
+                <video controls>
+                    <source src="{{ i.link }}" type="video/mp4">
+                   
+                </video>
+            </div>
+        {% endfor %}
+        <button onclick="hand()">GO BACK</button>
+    </div>
+
+    <script>
+        function hand() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

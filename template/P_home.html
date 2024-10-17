@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+        .contain{
+            width: 100%;
+            height: 70%;
+            background-color: rgb(128, 52, 52);
+            margin-top: 5%;
+           
+        }
+        .ani {
+       width: 100%;
+       height: 100%;
+       
+   
+       margin: auto;
+       animation-name: kan;
+      
+       animation-duration: 20s; 
+      animation-direction: alternate-reverse;
+       
+   
+       
+       animation-iteration-count: infinite; 
+       
+       top: 0; 
+       left: 0; 
+      
+   }
+   
+   @keyframes kan {
+       0% {
+           background-image: url(/static/p1.jpg);
+           background-repeat:no-repeat;
+           background-size: cover;
+           background-position: center ;
+       }
+       30% {
+           background-image: url(/static/p2.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center ;
+        
+           
+       }
+       50% {
+           background-image: url(/static/p3.jpg);
+           background-position: center ;
+        
+           background-size: cover; 
+        }
+       70% {
+           background-image: url(/static/p4.png);
+           background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center ;
+       }
+       
+       80% {
+           background-image: url(/static/p5.jpeg);
+           background-repeat: no-repeat;
+           background-position: center ;
+        }
+       100% {
+           background-image: url(/static/p6.jpeg);
+           
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center ;
+        }
+  
+       
+   }
+#count{
+    width: 100%;
+    height: 120px;
+    background-color: brown;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#achead {
+    width: 10%;
+    height: 100%;
+    background-color: rgb(235, 201, 9);
+   color: rgb(5, 5, 5);
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+  left: 0px;
+
+}
+       #ac ul{
+        width: 90%;
+    height: 100%;
+        display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: rgba(56, 55, 54, 0.795);
+       gap: 20px;
+       list-style: none;
+       border-radius: 24px;
+       color: whitesmoke;
+       margin: auto;
+       }
+       #ac p2{
+        display: block;
+       }
+       #course{
+        width: 100%;
+        height: 400px;
+     display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+       }
+       .uni{
+       
+        height: 100%;
+        width: 20%;
+        margin-top: 40px;
+        
+       }
+       .subimg{
+        width: 100%;
+        height: 35%;
+      
+       }
+       .subimg img{
+        width: 100%;
+        height: 100%;
+       }
+       .subcontent{
+        width: 100%;
+        height: 65%;
+       
+       }
+       .subcontent h1{
+        font-size: medium;
+        margin: auto;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        align-items: center;
+        text-align: center;
+       }
+       .subcontent p{
+        font-family: "Lobster", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  font-size: small;
+       }
+       /* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; 
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px; 
+    min-width: 150px; 
+}
+
+.footer-section h2 {
+    margin-bottom: 10px; 
+    font-size: 18px; 
+    text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 13px; 
+    line-height: 1.4; 
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px; 
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-section .social-links a {
+    margin: 0 8px; 
+}
+
+.footer-section .social-links img {
+    width: 20px; 
+    height: 20px; 
+    filter: invert(100%);
+}
+
+.footer-bottom {
+    margin-top: 20px; 
+    border-top: 1px solid #555;
+    padding: 10px 0; 
+}
+#tophead{
+        
+        height: 40px;
+        width: 380px;
+        margin: auto;
+        text-align: center;
+        background-color: rgb(255, 128, 0);
+        border-radius: 30px;
+    }
+    
+    #tophead p{
+        font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+    }
+    #subject{
+       
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .subconts{
+        height: 80%;
+        width: 22%;
+       
+        border: 2px solid rgba(10, 9, 9, 0.463);
+    }
+    .subconts img{
+        width: 100%;
+        height: 100%;
+    }
+   
+    </style>
+</head>
+<body>
+    
+    {% include 'Parentnavbar.html' %}
+   
+    <div class="contain">
+        <div class="ani">
+
+        </div>
+
+
+    </div>
+    <div id="count">
+        <div id="achead">
+            <p>OUR ACHEIVEMENT</p>
+
+        </div>
+        <div id="ac">
+            <ul>
+                <li><p1>12+</p1><p2>YEARS OF GLORIOUS JOURNEY</p2></li>
+                <li><p1>1200+</p1><p2>Placements Opportunity</p2></li>
+                <li><p1>120+</p1><p2>Faculity Members</p2></li>
+                <li><p1>100+</p1><p2>Hiring Partners</p2></li>
+            </ul>
+            
+
+        </div>
+        <div id="achead">
+            <p>OUR ACHEIVEMENT</p>
+
+        </div>
+
+    </div>
+    <div id="course">
+        
+        <div class="uni">
+            <div class="subimg">
+                <img src="/static/sbg.jpeg" alt="error">
+            </div>
+            <div class="subcontent">
+                <h1>Placement</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, modi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, earum enim at repudiandae placeat beatae blanditiis delectus, cupiditate perferendis cumque non dignissimos, quam reiciendis impedit facere? Natus placeat reprehenderit laboriosam?</p>
+            </div>
+            
+        </div>
+        <div class="uni">
+            <div class="subimg"><img src="/static/OIP.jpeg" alt="error"></div>
+            <div class="subcontent">
+                <h1>Admission</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, modi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi eos optio molestiae magnam quos beatae adipisci maiores consequuntur cupiditate mollitia dignissimos quis at, quam repudiandae ad repellat dicta ut modi!</p>
+            </div>
+        </div>
+        <div class="uni">
+            <div class="subimg"><img src="/static/sbg.webp" alt="error"></div>
+            <div class="subcontent">
+                <h1>Department</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, modi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore hic, omnis nulla quam magnam vitae harum, sequi amet, quas libero quis facere soluta animi. Dolores similique qui totam exercitationem accusamus.</p>
+            </div>
+        </div>
+        <div class="uni">
+            <div class="subimg"><img src="/static/logo.png" alt="error"></div>
+            <div class="subcontent"><h1>Scholarship</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, iusto amet sed ipsam repellendus maiores quo animi enim fugiat quidem asperiores velit facilis omnis, doloribus ea tempora molestias possimus facere.</p></div>
+        </div>
+    </div>
+    <div id="tophead">
+        
+        <p>Institution Provides Diploma & B.Tech Course  in</p>
+    </div>
+    <div id="subject">
+        <div class="subconts"><img src="/static/mech.png"></div>
+        <div class="subconts"><img src="/static/civil.png"></div>
+        <div class="subconts"><img src="/static/ee.png"></div>
+        <div class="subconts"><img src="/static/cse.png"></div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel sapien et eros auctor laoreet.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>123 College Road, City, Country</p>
+                <p>Email: info@college.edu</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Alumni</a></li>
+                </ul>
+            </div>
+         
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#"><img src="/static/fb.png" alt="Facebook"></a>
+                    <a href="#"><img src="/static/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="/static/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <p>&copy; 2024 Gurukul. All rights reserved.</p>
+        </div>
+        
+    </footer>
+    
+</body>
+</html>

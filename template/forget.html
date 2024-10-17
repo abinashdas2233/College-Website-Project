@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget_Password</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    
+</head>
+<body>
+    <div id="mainlog">
+      
+        <div id="login">
+            <div id="img">
+                <img src="/static/logo.png" alt="error">
+    
+            </div>
+            <br>
+            <div id="head"><h1>Forget Password</h1></div>
+        
+            <form action="/validationpassword/" method="post">
+                {%csrf_token%}
+                <select name="authmethod" >
+                    <option >--Select Option--</option>
+                    <option value="id">By ID</option>
+                    <option value="previouspassword">By Previous Password</option>
+                </select>
+                <br>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <br>
+                <input type="password" name="previous" placeholder="Enter Id or Old Password" required>
+                <br>
+               <input type="password" name="password" placeholder="Enter New Password" required>
+                <br>
+                
+                <br>
+                <input type="submit" value="submit" id="btn" >
+            </form>
+    </div>
+       
+    </div>
+    
+    
+</body>
+</html>

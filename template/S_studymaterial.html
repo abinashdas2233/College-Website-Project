@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+        body{
+            overflow: hidden;
+        }
+       
+        #sec-cont{
+           
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+            
+        }
+       
+        #block2{
+            height: 80%;
+            width: 30%;
+          
+            text-align: center;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+           
+          
+        }
+        #block2 h1{
+            height: 60%;
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+      
+      
+        #block3{
+            height: 100%;
+            width: 60%;
+          
+        }
+        #block3 img{
+            width: 100%;
+            height: 100%;
+        }
+        #btn{
+            display: block;
+            margin: auto;
+            background-color: blue;
+            color: whitesmoke;
+            border-radius: 10px;
+            margin-top: 3%;
+        }
+        #select{
+            display: block;
+            margin: auto;
+        }
+       
+     
+    </style>
+</head>
+
+<body>
+    
+        {%include 'studentnavbar.html'%}
+        <div id="sec-cont">
+            <div id="block2">
+                <h1>“Learning gives creativity, creativity leads to thinking, thinking provides knowledge, and knowledge makes you great.”</h1>
+                <form action="/lk/" method="post"  id="uni">
+                    {% csrf_token %}
+                    <select name="branch" id="select">
+                        <option value="">--Select Branch--</option>
+                        <option value="EE">EE</option>
+                        <option value="CSE">CSE</option>
+                        <option value="MECH">MECH</option>
+                        <option value="EEE">EEE</option>
+                    </select>
+                    <input type="submit" value="Submit" id="btn">
+                    <p>Choose your Study Material</p>
+                </form>
+
+            </div>
+          
+          
+            <div id="block3">
+                <img src="/static/R.png">
+            </div>
+            
+    </div>
+       
+    
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Due</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <style>
+         body{
+         overflow: hidden;
+          
+        }
+        body div{
+            color: rgb(0, 0, 0);
+            
+        }
+        .form-container {
+            max-width: 600px;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:transparent;
+            background-color: rgba(0, 0, 0, 0.445);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+            border-radius: 20px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 14px;
+        }
+        input[type="submit"]{
+        background-color: #2d81f0;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+            margin: auto;
+            font-size: 16px;
+            margin-top: 4%;
+        }
+        
+
+        input[type="submit"]:hover {
+            background-color: #2d81f093;
+        }
+        .btn{
+            display:  flex;
+            gap: 200px;
+            
+        }
+        .btn button{
+            cursor: pointer;
+            background-color: #2d81f0;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            width: 80%;
+            margin: auto;
+            font-size: 16px;
+            margin-top: 4%;
+        }
+        form{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(245, 245, 245, 0.534);
+            padding-bottom: 5px;
+            border-radius: 20px;
+            margin-top: 5px;
+          
+        }
+    </style>
+</head>
+<body>
+    {% include 'AdminNavbar.html'%}
+    <div class="form-container">
+        
+       
+        
+        <form  action="/dueform/" method="post">
+            {% csrf_token %}
+            <h2>Student Form</h2>
+            
+            <input type="text"  name="id" placeholder="Enter Reqistration Number" required>
+            
+            
+            <input type="text"  name="name" placeholder="Enter Full Name"  required>
+            
+            
+            <input type="text"  name="branch" placeholder="Enter Branch with Year">
+            
+            
+            <input type="number"  name="fee" value="60000" readonly>
+            
+            
+            <input type="number"  name="due_amount" placeholder="Enter Pending Dues">
+            
+            
+            <input type="text"  name="cleared_dues" placeholder="Enter Cleared Dues">
+            
+            <input type="submit" value="Submit">
+        </form>
+</body>
+</html>

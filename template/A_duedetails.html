@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Pending Dues</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <style>
+        body{
+            overflow: hidden;
+        }
+       
+        h1 {
+            text-align: center;
+            color: #f7f7f7cb;
+            margin-top: 20px;
+        }
+        .table-container {
+            max-width: 800px;
+            margin: 20px auto;
+            height: 450px;
+            padding: 20px;
+            background-color:transparent;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url(/static/sbg.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-top: 100px;
+            overflow: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            
+            
+        }
+        table, th, td {
+            border: none;
+        }
+       
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        
+        tr:hover {
+            background-color: #1677c7;
+            color: rgb(212, 209, 209);
+        }
+    </style>
+</head>
+<body>
+    {% include 'AdminNavbar.html' %}
+    <div class="table-container">
+        <h1>Student Pending Dues</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Fee</th>
+                    <th>Due Pending Amount</th>
+                    <th>Cleared Dues</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in hk %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.branch}}</td>
+                    <td>{{i.Fee}}</td>
+                    <td>{{i.due_amount}}</td>
+                    <td>{{i.cleared_dues}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

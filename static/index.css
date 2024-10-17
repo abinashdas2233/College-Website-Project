@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kalam:wght@300;400;700&display=swap');
+body{
+    
+    background-image: url('./nw1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: 900;
+    height: 100vh;
+    overflow: hidden;
+   
+}
+#img{
+    margin: auto;
+}
+
+#img img{
+  
+    top: 0%;
+   
+    height: 100px;
+}
+h1{
+    color: rgb(219, 215, 215);
+    font-family: "Exo 2", sans-serif;
+  
+}
+#login{
+
+height: 555px;
+width: 30%;
+background-color: rgba(5, 5, 5, 0.63);
+vertical-align: auto;
+color: rgb(236, 230, 230);
+
+margin: auto;
+display: grid;
+align-items: center;
+justify-content: center;
+
+padding-top:18px;
+padding-bottom: 18px;
+border-radius: 18px;
+
+
+}
+#head{
+    margin: auto;
+}
+#login form {
+    width: 280px;
+    margin: auto;
+    padding: 0px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px;
+    
+   border-radius: 15px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.068);
+    
+    
+}
+
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+   
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+input[type="submit"] {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    background: #2e08da;
+    border: none;
+    border-radius: 4px;
+    
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 14px;
+}
+
+
+input[type="submit"]:hover {
+    background: #040363;
+}
+a{
+    color: rgb(238, 22, 22);
+    text-decoration-line: none;
+    font-weight: 500;
+    font-family: "Kalam", cursive;
+    font-size: medium;
+}

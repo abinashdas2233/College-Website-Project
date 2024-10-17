@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Center</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+         .table-container{
+        background-color: rgba(84, 85, 83, 0.788);
+        margin-top: 5%  ;
+       width: 100%;
+       height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+    }
+    table{
+        margin: auto;
+        background-color: rgb(243, 241, 245);
+        overflow: auto;
+        width: 70%;
+    }
+    thead{
+        font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+    }
+    td{
+        text-align: center;
+        font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 300;
+  
+    }
+    #tophead{
+        
+        height: 80px;
+        width: 380px;
+        margin: auto;
+        text-align: center;
+    }
+    #tophead h1{
+        font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: large;
+
+    }
+    #tophead p{
+        font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    }
+    #subject{
+       
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .subconts{
+        height: 80%;
+        width: 22%;
+       
+        border: 2px solid rgb(10, 9, 9);
+    }
+    .subconts img{
+        width: 100%;
+        height: 100%;
+    }
+    .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; 
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px; 
+    min-width: 150px; 
+}
+
+.footer-section h2 {
+    margin-bottom: 10px; 
+    font-size: 18px; 
+    text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 13px; 
+    line-height: 1.4; 
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px; 
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-section .social-links a {
+    margin: 0 8px; 
+}
+
+.footer-section .social-links img {
+    width: 20px; 
+    height: 20px; 
+    filter: invert(100%);
+}
+
+.footer-bottom {
+    margin-top: 20px; 
+    border-top: 1px solid #555;
+    padding: 10px 0; 
+}
+    </style>
+   
+</head>
+<body>
+    {% include 'Parentnavbar.html' %}
+    
+    <div class="table-container">
+       
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Notice No.</th>
+                    <th>Date & Time</th>
+                    <th>Notice</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in fd %}
+                <tr>
+                    <td>{{ i.notice_no }}</td>
+                    <td>{{ i.date_time }}</td>
+                    <td>{{ i.notice }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="tophead">
+        <h1>Our  Programme</h1>
+        <p>Institution Provides Diploma & B.Tech Course  in</p>
+    </div>
+    <div id="subject">
+        <div class="subconts"><img src="/static/mech.png"></div>
+        <div class="subconts"><img src="/static/civil.png"></div>
+        <div class="subconts"><img src="/static/ee.png"></div>
+        <div class="subconts"><img src="/static/cse.png"></div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel sapien et eros auctor laoreet.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>123 College Road, City, Country</p>
+                <p>Email: info@college.edu</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Alumni</a></li>
+                </ul>
+            </div>
+         
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#"><img src="/static/fb.png" alt="Facebook"></a>
+                    <a href="#"><img src="/static/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="/static/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <p>&copy; 2024 Gurukul. All rights reserved.</p>
+        </div>
+        
+    </footer>
+    
+    
+</body>
+</html>

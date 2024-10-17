@@ -1,0 +1,36 @@
+body{
+    background-image: url(/static/tbg.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.navb ul {
+    display: flex;
+    
+    top: 0%;
+    position: fixed;
+    width: 95%;
+    gap: 25%;
+    list-style: none;
+    border-style:groove ;
+}
+.sk-2{
+    margin-top: 10%;
+    display: flex;
+    background-color: red;
+    border-style: groove;
+    height: 60%;
+    gap: 10px;
+    
+}
+.jk1{
+    background-color: rgb(12, 193, 218);
+    height: 80%;
+
+}
+.jk2{
+    background-color: green;
+}
+.jk3{
+    background-color: blanchedalmond;
+}

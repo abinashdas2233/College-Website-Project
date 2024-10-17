@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Teachers DashBoard</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lilita+One&display=swap');
+        body {
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+    overflow: hidden;
+    color: rgb(238, 236, 236);
+    background-color: rgba(43, 45, 45, 0.435);
+  
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    text-align: center;
+    color: red;
+}
+
+.sk-1 {
+  
+    padding: 15px;
+    text-align: center;
+}
+
+.navb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navb li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.navb h1 {
+    color: #ffffff;
+    margin: 0;
+}
+
+.sk-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    margin-top: 3%;
+}
+
+.jk1, .jk2 {
+    background-color: #2a2828b6;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 25px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], select {
+   
+    margin: 12px 0;
+    border: 1px solid #ced4da;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid black;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 15%;
+    margin: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+button {
+   
+   margin:  auto;
+ display: block;
+   font-size: 1.2em;
+   background-color: #ff1919;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 2%;
+   transition: background-color 0.3s;
+}
+    </style>
+</head>
+
+<body>
+   
+    <div class="sk-1">
+       
+        <div class="navb">
+            <ul>
+           <li> <img src="/static/logo.png" height="85"></li>
+            
+         
+        </ul>
+        </div>
+    </div>
+    <div class="sk-2">
+        <div class="jk1">
+            <form action="/upc/" method="post">
+                <h1>Upload course Here</h1>
+                {%csrf_token%}
+                <input type="text" name="id" placeholder="Enter Subject Id" required>
+                <br>
+                <input type="text" name="sub" placeholder="Enter Subject Name" required>
+                <br>
+                <select name="branch">
+                    <option value="">--Select Branch--</option>
+                    <option value="EE">EE</option>
+                    <option value="CSE">CSE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="EEE">EEE</option>
+                </select>
+                <br>
+                <input type="text" name="link" placeholder="Enter Link" required>
+                <br>
+
+                <input type="submit" value="Submit" id="btn" >
+            </form>
+           </div>
+           <div class="jk2">
+            <form action="/dc/" method="post">
+                <h1>Delete Course Here</h1>
+                {%csrf_token%}
+                Subject id-<input type="text" name="id" placeholder="Enter subject id"required>
+                <br>
+                <input type="submit" value="Delete">
+                <button onclick="hand()">GO BACK</button>
+            </form>
+           </div>
+         
+           <script>
+            function hand() {
+                window.history.back();
+            }
+        </script>
+       
+    
+</body>
+</html>

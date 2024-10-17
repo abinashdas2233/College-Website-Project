@@ -1,0 +1,39 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Gurukul -Login</title>
+    <link rel="icon" href="/static/logo.png" type="png">
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div id="mainlog">
+      
+        <div id="login">
+            <div id="img">
+                <img src="/static/logo.png" alt="error">
+    
+            </div>
+            <br>
+            <div id="head"><h1>Login</h1></div>
+        
+            <form action="/validation/" method="post">
+               
+                {%csrf_token%}
+                <input type="email" name="email" placeholder="Enter Email Id" required>
+                <br>
+               <input type="password" name="password" placeholder="Enter Password" required>
+                <br>
+                <a href="/fpv/">Forgot Password?</a>
+                <br>
+                <input type="submit" value="Login" id="btn" >
+            </form>
+    </div>
+       
+    </div>
+    
+    
+</body>
+</html>
